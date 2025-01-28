@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.contract-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contract-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contract-header .logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.contract-header h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.contract-details, .clause-section, .contract-preview, .signature-section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+button {
+    display: block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.signature-section {
+    text-align: center;
+}
+
+.signature {
+    margin: 20px 0;
+}
+
+.signature p {
+    margin: 0;
+}
+
+.action-buttons {
+    text-align: center;
+}

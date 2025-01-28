@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato de Relacionamento</title>
+    <link rel="stylesheet" href="../assents/editor.css">
+    <link rel="icon" href="../imgs/Logo.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="contract-container">
+        <!-- Cabeçalho -->
+        <header class="contract-header">
+            <img src="../imgs/Logo.png" alt="Logo" class="logo">
+            <h1>Contrato de Relacionamento</h1>
+        </header>
+
+        <!-- Detalhes do contrato -->
+        <section class="contract-details">
+            <p>Este contrato é celebrado entre:</p>
+            <div class="partner-info">
+                <label>Parceiro 1:</label>
+                <input type="text" id="partner1" placeholder="Nome do Parceiro 1">
+                <input type="text" id="partner1CPF" placeholder="CPF do Parceiro 1">
+            </div>
+            <div class="partner-info">
+                <label>Parceiro 2:</label>
+                <input type="text" id="partner2" placeholder="Nome do Parceiro 2">
+                <input type="text" id="partner2CPF" placeholder="CPF do Parceiro 2">
+            </div>
+            <div class="contract-type">
+                <label for="contractType">Tipo de contrato:</label>
+                <select id="contractType">
+                    <option value="formal">Formal</option>
+                    <option value="divertido">Divertido</option>
+                    <option value="engracado">Engraçado</option>
+                    <option value="sexy">Sexy</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Cláusulas -->
+        <section class="clause-section">
+            <h2>Cláusulas</h2>
+            <textarea id="clauseInput" placeholder="Adicione cláusulas personalizadas"></textarea>
+            <button type="button" id="addClauseButton">Adicionar Cláusula</button>
+        </section>
+
+        <!-- Visualização do contrato -->
+        <section class="contract-preview">
+            <h2>Visualização do Contrato</h2>
+            <div id="contractPreview">
+                <p>Aqui será exibido o conteúdo do contrato em tempo real.</p>
+            </div>
+        </section>
+
+        <!-- Assinaturas -->
+        <section class="signature-section">
+            <h2>Assinaturas</h2>
+            <div class="signature">
+                <p>____________________________</p>
+                <p>Assinatura do Parceiro 1</p>
+            </div>
+            <div class="signature">
+                <p>____________________________</p>
+                <p>Assinatura do Parceiro 2</p>
+            </div>
+        </section>
+
+        <!-- Botão de gerar PDF -->
+        <div class="action-buttons">
+            <button id="generatePDFButton">Gerar PDF</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="../assents/editor.js"></script>
+   
+</body>
+</html>
