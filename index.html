@@ -1,36 +1,241 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contrato de Amor</title>
-    <link rel="stylesheet" href="./assents/Style.css">
-    <link rel="icon" href="../imgs/Logo.png" type="image/x-icon">
-</head>
+    <link rel="icon" href="./imgs/Logo.png" type="image/x-icon">
+    <title>Contrato de amor</title>
+    <style>
+        :root {
+            --cor-primaria: #7C3AED;
+            --cor-secundaria: #4C51BF;
+            --cor-fundo: #F8FAFC;
+            --cor-texto: #2D3748;
+            --cor-destaque: #F59E0B;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--cor-fundo), #FFFFFF);
+            min-height: 100vh;
+            color: var(--cor-texto);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .hero {
+            padding: 4rem 1rem;
+            animation: slideUp 1s ease-out;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--cor-primaria);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .destaque {
+            color: var(--cor-secundaria);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .slider-wrapper {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(124,58,237,0.1);
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            padding: 3rem 2rem;
+            background: white;
+        }
+
+        .slide-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .preco {
+            font-size: 2.5rem;
+            margin: 2rem 0;
+            color: var(--cor-primaria);
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria));
+            color: white;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(124,58,237,0.3);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(124,58,237,0.4);
+        }
+
+        .cta-button::after {
+            content: '→';
+            margin-left: 1rem;
+            transition: margin 0.3s ease;
+        }
+
+        .cta-button:hover::after {
+            margin-left: 1.5rem;
+        }
+
+        .beneficios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            padding: 2rem;
+            background: rgba(255,255,255,0.9);
+            border-radius: 20px;
+        }
+
+        .beneficio {
+            padding: 2rem;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .beneficio:hover {
+            transform: translateY(-5px);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .slide { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
 <body>
     <div class="container">
-        <header class="header">
-            <h1>Fortaleça seu relacionamento com um contrato perfeito!</h1>
-        </header>
-        <main>
-            <div class="logo-section">
-                <img src="./imgs/Logo.png"
-                    alt="Logo Contrato de Amor" class="logo">
+        <div class="hero">
+            <h1>Crie Acordos Perfeitos para Qualquer Relação! 💼</h1>
+            <p class="destaque">Personalize contratos que respeitam sua individualidade</p>
+
+            <div class="slider-wrapper">
+                <div class="slider" id="slider">
+                    <!-- Formal -->
+                    <div class="slide">
+                        <div class="slide-icon">📄</div>
+                        <h2>Contrato Formal</h2>
+                        <p>Responsabilidades claras • Metas compartilhadas • Gestão profissional</p>
+                    </div>
+
+                    <!-- Sexy -->
+                    <div class="slide">
+                        <div class="slide-icon">🔥</div>
+                        <h2>Contrato Sexy</h2>
+                        <p>Jogos adultos • Experiências ousadas • Conexão íntima</p>
+                    </div>
+
+                    <!-- Divertido -->
+                    <div class="slide">
+                        <div class="slide-icon">🎉</div>
+                        <h2>Contrato Divertido</h2>
+                        <p>Desafios criativos • Brincadeiras • Momentos descontraídos</p>
+                    </div>
+                </div>
             </div>
-            <div class="button-section">
-                <!-- Botão atualizado -->
-                <button class="start-button" onclick="redirectToStripe()">Pagar e Criar Contrato</button>
-                <p class="price-info">* Cada contrato gerado terá um custo de R$ 5,00.</p>
+
+            <div class="preco">
+                Apenas <strong>R$ 5,00</strong>
+                <div style="font-size: 1rem; margin-top: 0.5rem;">(Garantia de satisfação ou seu dinheiro de volta!)</div>
             </div>
-        </main>
-        <footer class="footer">
-            <p>&copy; 2025 Contrato de Amor. Todos os direitos reservados.</p>
-        </footer>
+
+<!-- Botão modificado -->
+<button class="cta-button" onclick="window.location.href='https://buy.stripe.com/cN2bLr3UW6q57zabII'">
+    Criar Meu Contrato Agora
+</button>
+        </div>
+
+        <div class="beneficios">
+            <div class="beneficio" style="background: rgba(124,58,237,0.05);">
+                <h3>🔒 Segurança Total</h3>
+                <p>Dados protegidos • Sem spam • Cancelamento fácil</p>
+            </div>
+            <div class="beneficio" style="background: rgba(245,158,11,0.05);">
+                <h3>⚡ Rápido</h3>
+                <p>Pronto em 2 minutos • Modelos pré-formatados • Edição fácil</p>
+            </div>
+            <div class="beneficio" style="background: rgba(76,81,191,0.05);">
+                <h3>💡 Universal</h3>
+                <p>Para todos os gêneros • Qualquer tipo de relação • Todas as idades</p>
+            </div>
+        </div>
     </div>
 
-    <script src="./assents/script.js"></script>
-</body>
+    <script>
+        // Slider Automático
+        let currentSlide = 0;
+        const slider = document.getElementById('slider');
+        const totalSlides = 3;
 
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        setInterval(nextSlide, 5000);
+
+        // Animações ao Scroll
+        window.addEventListener('scroll', () => {
+            const beneficios = document.querySelectorAll('.beneficio');
+            beneficios.forEach((item, index) => {
+                const rect = item.getBoundingClientRect();
+                if(rect.top < window.innerHeight * 0.8) {
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, index * 200);
+                }
+            });
+        });
+
+        // Efeito de Confete no Botão
+        document.querySelector('.cta-button').addEventListener('click', function() {
+            this.style.animation = 'pulse 0.5s';
+            setTimeout(() => {
+                this.style.animation = '';
+            }, 500);
+        });
+    </script>
+</body>
 </html>
